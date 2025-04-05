@@ -22,10 +22,18 @@ The goal of this project is twofold:
 
 ---
 
+## ⚙️ How to Run
+
+
+```bash
+pip install torch numpy tqdm
+
+cd transformer1
+python train.py
+
+---
+
 ## 🧱 Project Structure
-
-This is version **`transformer1/`**, the first iteration. Future versions (e.g., `transformer2/`) may include improvements like learnable position encoding, pretrained tokenizers, and larger datasets.
-
 
 transformer1/
 ├── config.py                 # model hyperparameters
@@ -41,21 +49,10 @@ transformer1/
 
 ---
 
-## ⚙️ How to Run
-
-### 1. Install Dependencies
-```bash
-pip install torch numpy tqdm
-
-cd transformer1
-python train.py
-
-
-
 
 ## 📌 Project Overview
 
-### `transformer2/` — Real Dataset Training & Visualization
+# Transformer2: — Real Dataset Training & Visualization
 
 A classifier-only Transformer encoder trained on [AG News](https://huggingface.co/datasets/ag_news). This version demonstrates:
 
@@ -67,8 +64,22 @@ A classifier-only Transformer encoder trained on [AG News](https://huggingface.c
 - 💾 Model saving to `best_model.pt`
 - 🔍 Model structure inspection using `torchinfo` in `visualize.py`
 
+---
+
+## ⚙️ How to Run
+
+
+```bash
+pip install torch numpy tqdm transformers datasets scikit-learn matplotlib torchinfo
+
+cd transformer2
+python train.py       # trains model and plots training/validation curves
+python visualize.py   # shows architecture summary
+
 
 ---
+
+
 ## 🧱 Project Structure
 
 transformer2/
@@ -85,13 +96,4 @@ transformer2/
 
 ---
 
-## ⚙️ How to Run
 
-### 1. Install Dependencies
-
-```bash
-pip install torch numpy tqdm transformers datasets scikit-learn matplotlib torchinfo
-
-cd transformer2
-python train.py       # trains model and plots training/validation curves
-python visualize.py   # shows architecture summary
