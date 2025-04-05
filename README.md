@@ -49,3 +49,49 @@ pip install torch numpy tqdm
 
 cd transformer1
 python train.py
+
+
+
+
+## 📌 Project Overview
+
+### `transformer2/` — Real Dataset Training & Visualization
+
+A classifier-only Transformer encoder trained on [AG News](https://huggingface.co/datasets/ag_news). This version demonstrates:
+
+- ⚙️ Hugging Face tokenizer integration
+- 📊 Training on 20k news headlines for topic classification
+- 🧠 Encoder-only Transformer architecture
+- 📉 Loss & accuracy plots (`training_plot.png`)
+- 🛑 Early stopping based on validation
+- 💾 Model saving to `best_model.pt`
+- 🔍 Model structure inspection using `torchinfo` in `visualize.py`
+
+
+---
+## 🧱 Project Structure
+
+transformer2/
+├── config.py
+├── embedding_positional.py
+├── attention.py
+├── feed_forward.py
+├── encoder.py
+├── transformer.py           # encoder-only classifier
+├── train.py                 # training with early stopping & plotting
+├── visualize.py             # model summary with torchinfo
+├── training_plot.png        # saved learning curve
+├── best_model.pt            # saved weights
+
+---
+
+## ⚙️ How to Run
+
+### 1. Install Dependencies
+
+```bash
+pip install torch numpy tqdm transformers datasets scikit-learn matplotlib torchinfo
+
+cd transformer2
+python train.py       # trains model and plots training/validation curves
+python visualize.py   # shows architecture summary
